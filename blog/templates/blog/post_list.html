@@ -1,22 +1,12 @@
-<html>
-    <head>
-        <title>TESTE DE DEV</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">DEV DEV DEV</a></h1>
-        </div>
+<div>
+    <h1><a href="/">ambiente teste</a></h1>
+</div>
 
-        <div>
-            <p>publicado: 14.06.2014, 12:14</p>
-            <h2><a href="">PRIMEIRA POSTAGEM</a></h2>
-            <p>polengo</p>
-        </div>
+{% for post in posts %}
+    <div>
+        <p>publicado em: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 
-        <div>
-            <p>publicado: 14.06.2014, 12:14</p>
-            <h2><a href="">SEGUNDA POSTAGEM</a></h2>
-            <p>barriguinha mole</p>
-        </div>
-    </body>
-</html>
